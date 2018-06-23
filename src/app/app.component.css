@@ -1,3 +1,10 @@
-body{
-    background-color: black
+.container{
+    background-color: black;
+    align-content: center;
+    text-align: center;
+    color:white;
+}
+
+.content{
+    color:lightgreen
 }
