@@ -14,6 +14,8 @@ class PostData{
   public body;
 }
 
+const URL = 'https://jsonplaceholder.typicode.com/posts?userId=1';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -29,19 +31,19 @@ export class AppComponent implements OnInit
     private state: TransferState
   ){}
   
-
   ngOnInit(){
-   
    this.myPostData = this.state.get<PostData[]>(MYPOSTDATA_KEY,null)
    console.log("Current KEY = " + this.myPostData)
 
    if(!this.myPostData){
       console.log("Updating KEY ...")
-      this.http.get<any>('https://jsonplaceholder.typicode.com/posts?userId=1')
-      .map(res => <PostData[]>res)
+      
+      this.http.get<any>(URL)
+      .map(response => <PostData[]>response)
       .subscribe(data => {
         this.myPostData = data;
         this.state.set(MYPOSTDATA_KEY,this.myPostData)
+        
         console.log("New KEY = "+this.state.get(MYPOSTDATA_KEY,this.myPostData))
      });
     }
