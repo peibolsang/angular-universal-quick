@@ -2,9 +2,10 @@
 <div class="container">
   <img height="100" width="100" alt="Angular Universal Logo" src="https://s.gravatar.com/avatar/8a4dee5fb03c58865ebfe05a43587171?size=496&default=retro">
   <h1>
-    Welcome to Angular Universal with Transfer State!
+    Angular Universal Demo with full Transfer State!
   </h1>
-  <h2>This data is retrieved from a REST API on the Server Only</h2>
+  <h2>Select the Sample API you want to see. Data will be retrived on the Server only!</h2>
+  <app-api-toggle></app-api-toggle>
   <div *ngFor="let post of myPostData" class="content">
     <table>
       <tr><td><strong>User ID</strong></td><td>{{ post.userId }}</td></tr>
