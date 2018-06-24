@@ -1,11 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
+  <img width="300" alt="Angular Universal Logo" src="https://s.gravatar.com/avatar/8a4dee5fb03c58865ebfe05a43587171?size=496&default=retro">
   <h1>
     Welcome to Angular Universal with Transfer State!
   </h1>
-  <h2>This data is retrieved from a REST API on the Server Only</h2> 
-  <p class="content">{{ title }}</p>
-  <img width="300" alt="Angular Logo" src="https://s.gravatar.com/avatar/8a4dee5fb03c58865ebfe05a43587171?size=496&default=retro">
+  <h2>This data is retrieved from a REST API on the Server Only</h2>
+  <div *ngFor="let post of myPostData" class="content">
+    <p>User ID = {{ post.userId }}</p>
+    <p>ID = {{ post.id}}</p>
+    <p>Title = {{ post.title }}</p>
+    <p>Body = {{ post.body }}</p>
+  </div>
 </div>
 
 

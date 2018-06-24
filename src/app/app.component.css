@@ -6,5 +6,7 @@
 }
 
 .content{
-    color:lightgreen
+    color:lightgreen;
+    border-bottom: 1px;
+    border-color: white;
 }
