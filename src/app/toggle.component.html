@@ -1,5 +1,5 @@
 <div class="container">
-    <input type="radio" name="api" value="POSTS" checked>POSTS
-    <input type="radio" name="api" value="USERS">USERS
-    <input type="radio" name="api" value="TODOS">TODOs
+    <input type="radio" name="apivalue" [(ngModel)]="api" (ngModelChange)="click($event)" value="POSTS" checked>POSTS
+    <input type="radio" name="apivalue" [(ngModel)]="api" (ngModelChange)="click($event)" value="USERS">USERS
+    <input type="radio" name="apivalue" [(ngModel)]="api" (ngModelChange)="click($event)" value="TODOS">TODOs
 </div>

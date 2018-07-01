@@ -4,11 +4,13 @@ import { isPlatformBrowser } from '@angular/common';
 
 import { ToggleComponent } from './toggle.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { ToggleService } from './toggle.service';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
     declarations: [],
-    imports: [],
-    providers: [],
+    imports: [FormsModule],
+    providers: [ToggleService],
     bootstrap: [ToggleComponent]
   })
   

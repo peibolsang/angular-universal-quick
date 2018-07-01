@@ -1,5 +1,6 @@
 
 <!--IF TOGGLE===POST-->
+<div class="container"  *ngIf="valueSelected==='POSTS'">
   <div *ngFor="let post of myPostData" class="content">
     <table>
       <tr><td><strong>User ID</strong></td><td>{{ post.userId }}</td></tr>
@@ -8,4 +9,30 @@
       <tr><td><strong>Body</strong></td><td>{{ post.body }}</td></tr>
     </table>
   </div>
-  <!--ENDINF TOGGLE===POST-->
+</div>
+<!--ENDINF TOGGLE===POST-->
+<!--IF TOGGLE===USERS-->
+<div class="container" *ngIf="valueSelected==='USERS'">
+  <div *ngFor="let user of myUsers" class="content">
+    <table>
+      <tr><td><strong>User ID</strong></td><td>{{ user.id }}</td></tr>
+      <tr><td><strong>Name</strong></td><td>{{ user.name }}</td></tr>
+      <tr><td><strong>Username</strong></td><td>{{ user.username }}</td></tr>
+      <tr><td><strong>Email</strong></td><td>{{ user.email }}</td></tr>
+      <tr><td><strong>Address</strong></td><td>{{ user.address.street}}, {{user.address.city}}</td></tr>
+    </table>
+  </div>
+</div>
+<!--ENDINF TOGGLE===USERS-->
+<!--IF TOGGLE===TODOS-->
+<div class="container" *ngIf="valueSelected==='TODOS'">
+  <div *ngFor="let todo of myTodos" class="content">
+    <table>
+      <tr><td><strong>User ID</strong></td><td>{{ todo.userId }}</td></tr>
+      <tr><td><strong>ID</strong></td><td>{{ todo.id }}</td></tr>
+      <tr><td><strong>Title</strong></td><td>{{ todo.title }}</td></tr>
+      <tr><td><strong>Completed?</strong></td><td>{{ todo.completed }}</td></tr>
+    </table>
+  </div>
+</div>
+<!--ENDINF TOGGLE===TODOS-->

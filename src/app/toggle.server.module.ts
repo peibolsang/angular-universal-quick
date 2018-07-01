@@ -5,12 +5,13 @@ import { ModuleMapLoaderModule } from '@nguniversal/module-map-ngfactory-loader'
 import { ToggleComponent } from './toggle.component';
 import { TransferState } from '@angular/platform-browser';
 import { ToggleModule } from './toggle.module';
+import { ToggleService } from './toggle.service';
 
 @NgModule({
   imports: [
     ToggleModule
   ],
-  providers: [],
+  providers: [ToggleService],
   bootstrap: [ ToggleComponent ],
 })
 

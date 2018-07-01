@@ -10,7 +10,7 @@ import { ToggleComponent } from './toggle.component';
 import { ToggleModule } from './toggle.module';
 import { ContentComponent } from './content.component';
 import { ContentModule } from './content.module';
-
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,7 +24,8 @@ import { ContentModule } from './content.module';
     BrowserTransferStateModule,
     HttpClientModule,
     ToggleModule,
-    ContentModule
+    ContentModule,
+    FormsModule
   ],
   providers: [HttpClient,ToggleComponent,ContentComponent],
   bootstrap: [AppComponent]
