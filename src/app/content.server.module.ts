@@ -2,16 +2,15 @@ import { NgModule } from '@angular/core';
 import { ServerModule, ServerTransferStateModule } from '@angular/platform-server';
 import { ModuleMapLoaderModule } from '@nguniversal/module-map-ngfactory-loader';
 
-import { ToggleComponent } from './toggle.component';
+import { ContentComponent } from './Content.component';
 import { TransferState } from '@angular/platform-browser';
-import { ToggleModule } from './toggle.module';
+import { ContentModule } from './content.module';
 
 @NgModule({
   imports: [
-    ToggleModule
+    ContentModule
   ],
   providers: [],
-  bootstrap: [ ToggleComponent ],
+  bootstrap: [ ContentComponent ],
 })
-
-export class ToggleServerModule {}
+export class ContentServerModule {}

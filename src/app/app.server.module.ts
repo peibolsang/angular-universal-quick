@@ -7,16 +7,19 @@ import { AppComponent } from './app.component';
 import { TransferState } from '@angular/platform-browser';
 import { ToggleModule } from './toggle.module';
 import { ToggleComponent } from './toggle.component';
+import { ContentModule } from './content.module';
+import { ContentComponent } from './content.component';
 
 @NgModule({
   imports: [
     AppModule,
     ServerModule,
     ToggleModule,
+    ContentModule,
     ModuleMapLoaderModule,
     ServerTransferStateModule
   ],
-  providers: [ToggleComponent],
+  providers: [ToggleComponent,ContentComponent],
   bootstrap: [ AppComponent ],
 })
 export class AppServerModule {}
